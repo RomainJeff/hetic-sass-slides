@@ -43,7 +43,7 @@
 				</section>
 				
 
-				
+
 				<!-- QU'EST CE QU'UN PREPROC -->
 				<section>
 					<section>
@@ -357,6 +357,38 @@ body {
 
 
 
+				<!-- MIXINS -->
+				<section>
+					<section>
+						<h1>Les mixins</h1>
+						<h4 class="gray">La liberté</h4>
+					</section>
+
+					<section>
+						<h5>Exemple de création</h5>
+						<pre><code class="scss">
+@mixin border-radius($pixel) {
+  -webkit-border-radius: $pixel;
+  -moz-border-radius: $pixel;
+  -o-border-radius: $pixel;
+  -ms-border-radius: $pixel;
+  border-radius: $pixel;
+}
+						</code></pre>
+
+						<h5>Exemple d'utilisation</h5>
+						<pre><code class="scss">
+.test {
+  @include border-radius(10px);
+}
+						</code></pre>						
+					</section>
+
+					<section>
+						<p>Permet aussi d'importer des librairies externes <br><i style="font-size: 0.6em">(nous verrons ca ensuite)</i>						
+					</section>
+				</section>
+
 				<!-- DEMO MIXINS -->
 				<section>
 					<h1>DEMO TIME</h1>
@@ -364,6 +396,26 @@ body {
 				</section>
 
 
+				
+				<!-- LIBRAIRIES -->
+				<section>
+					<section>
+						<h1>Les librairies</h1>
+						<h4 class="gray">La productivité</h4>
+					</section>
+
+					<section>
+						<p>
+							<a href="http://compass-style.org" style="padding-right: 100px"><img src="images/compass_logo.png" width="300px"></a>
+							<a href="http://bourbon.io"><img src="images/bourbon_logo.png" width="300px"></a>
+						</p>				
+					</section>
+
+					<section>
+						<h3 class="gray">Nous utiliserons</h3>
+						<img src="images/compass_logo.png" width="600px">
+					</section>
+				</section>
 
 				<!-- DEMO LIBRAIRIES -->
 				<section>
