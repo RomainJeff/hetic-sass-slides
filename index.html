@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Sass, optimisez votre workflow</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Romain Quilliot, Arnaud Villani">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<!-- ACCUEIL -->
+				<section>
+					<h1><img src="images/sass_logo.svg" class="no-border"></h1>
+					<h3>Optimisez votre workflow</h3>
+					<p>
+						<small>Présenté par <a href="http://twitter.com/cytronaute">Arnaud Villani</a> & <a href="http://twitter.com/RomainJeff">Romain Quilliot</a></small>
+					</p>
+				</section>
+				
+				<!-- QU'EST CE QU'UN PREPROC -->
+				<section>
+					<section>
+						<h1>Un préprocesseur ?</h1>
+						<h4 class="gray">Oui Jamie explique nous !</h4>
+					</section>
+
+					<section>
+						<h1>Pour quoi faire ?</h1>
+						<p>
+							Il va permettre d'améliorer votre workflow.
+						</p>
+						<p>
+							Le code sera plus maintenable, plus rapide à écrire, plus élégant.
+						</p>
+					</section>
+
+					<section>
+						<h2>Fonctionnement</h2>
+						<p>
+							<img src="images/preproc_working.png" class="no-border">
+						</p>
+					</section>
+
+					<section>
+						<p>
+							<a href="http://sass-lang.org" style="padding-right: 100px"><img src="images/sass_logo.svg" width="200px"></a>
+							<a href="http://lesscss.org" style="padding-right: 100px"><img src="images/less_logo.png" width="200px"></a>
+							<a href="http://learnboost.github.io/stylus/"><img src="images/stylus_logo.png" width="200px"></a>
+						</p>
+					</section>
+
+					<section>
+						<h1>Post-processeur ?</h1>
+						<p>
+							La compilation de votre code se fait en live sur le navigateur du client.
+						</p>
+					</section>
+
+					<section>
+						<h2>Fonctionnement</h2>
+						<p>
+							<img src="images/postproc_working.png" class="no-border">
+						</p>
+					</section>
+
+					<section>
+						<h1>Problemes</h1>
+						<p>
+							<ul>
+								<li>Ralentissements côté client</li>
+								<li>Code non compilé sans Javascript</li>
+								<li>Code non compilé visible de tous</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3 class="gray">C'est pourquoi nous utiliserons</h3>
+						<p>
+							<img src="images/sass_logo.svg">
+						</p>
+					</section>
+				</section>
+
+
+				<!-- POURQUOI SASS -->
+				<section>
+					<section>
+						<h1>Pourquoi SASS</h1>
+						<h4 class="gray">La suite après la pub !</h3>
+					</section>
+
+					<section>
+						<h2>Le navigateur du futur</h2>
+						<video controls=true>
+							<source data-src="images/videos/pub_ie.mp4" type="video/mp4">
+						</video>
+					</section>
+
+					<section>
+						<ul>
+							<li>Syntaxe flexible (SASS & SCSS)</li>
+							<li>Librairies nombreuses</li>
+							<li>Pensé pour la maintenabilité</li>
+						</ul>
+					</section>
+				</section>
+
+
+				<!-- SASS & SCSS -->
+				<section>
+					<section>
+						<h1>SASS & SCSS</h1>
+						<h4 class="gray">La flexibilité syntaxique</h4>
+					</section>
+
+					<section>
+						<h2>SASS</h2>
+						<p>
+							Syntaxe basée sur Ruby:
+							<ul>
+								<li>Indentation</li>
+								<li>Saut à la ligne</li>
+								<li>Le code CSS habituel ne fonctionne pas</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h2>Exemple de code</h2>
+						<pre><code data-trim>.odd
+  color: #FFF
+  background: #000
+
+  a
+    color: #eee
+
+.even
+  color: #000
+  background: #FFF
+
+  a
+    color: #ddd
+							</code></pre>
+					</section>
+
+					<section>
+						<h2>SCSS</h2>
+						<p>
+							Syntaxe plus proche de CSS:
+							<ul>
+								<li>Le code CSS habituel fonctionne</li>
+								<li>Plus adapté pour une migration d'un projet existant vers SASS</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h2>Exemple de code</h2>
+						<pre><code class="css" data-trim>.odd {
+  color: #FFF;
+  background: #000;
+
+  a {
+    color: #eee;
+  }
+}
+
+.even {
+  color: #000;
+  background: #FFF;
+
+  a {
+    color: #ddd;
+  }
+}
+							</code></pre>
+					</section>
+
+					<section>
+						<h4 class="gray">Durant cette présentation nous utiliserons</h4>
+						<h1>SCSS</h1>
+					</section>
+				</section>
+				
+
+				<!-- DEMO EXPLAIN -->
+				<section>
+					<section>
+						<h1>Objectif de la demo</h1>
+					</section>
+
+					<section>
+						<h2 >Passer ce site en SASS</h2>
+						<img src="images/demo_intro_site_screen.jpg">
+					</section>
+				</section>
+
+
+				<!-- DEMO SETUP -->
+				<section>
+					<h1>DEMO TIME</h1>
+					<h4 class="gray">Installation de SASS</h4>
+				</section>
+
+				<!-- DEMO VARIABLES -->
+				<section>
+					<h1>DEMO TIME</h1>
+					<h4 class="gray">Implementation de variables</h4>
+				</section>
+
+				<!-- DEMO NESTING -->
+				<section>
+					<h1>DEMO TIME</h1>
+					<h4 class="gray">Implementation de l'imbrication</h4>
+				</section>
+
+				<!-- DEMO IMPORT -->
+				<section>
+					<h1>DEMO TIME</h1>
+					<h4 class="gray">Implementation de partials</h4>
+				</section>
+
+				<!-- DEMO MIXINS -->
+				<section>
+					<h1>DEMO TIME</h1>
+					<h4 class="gray">Implementation de mixins</h4>
+				</section>
+
+				<!-- DEMO LIBRAIRIES -->
+				<section>
+					<h1>DEMO TIME</h1>
+					<h4 class="gray">Installation et implémentation de COMPASS</h4>
+				</section>
+
+				<!-- EN SAVOIR PLUS -->
+				<section>
+					<section>
+						<h1>En savoir plus</h1>
+						<h3 class="gray">sur SASS & COMPASS</h3>
+					</section>
+					
+					<section>
+						<h2>Notions non abordées</h2>
+						<p>
+							<ul>
+								<li>Héritage</li>
+								<li>Conditions</li>
+								<li>Boucles</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h2>Livres & Articles</h2>
+						<p>
+							<ul>
+								<li><a href="http://www.css-maintenables.fr/">CSS Maintenables avec SASS & Compass</a> <span style="font-size: 0.7em">de Kaelig</span></li>
+								<li><a href="http://www.abookapart.com/products/sass-for-web-designers">Sass for web designers</a> <span style="font-size: 0.7em">de Chris Coyier</span></li>
+								<br>
+								<li><a href="http://alistapart.com/article/getting-started-with-sass">Getting started with SASS</a> <span style="font-size: 0.7em">de AListApart</span></li>
+								<li><a href="http://www.sitepoint.com/migrating-team-sass/">Migrating your team to SASS</a> <span style="font-size: 0.7em">de SitePoint</span></li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h2>Documentation</h2>
+						<p>
+							<ul>
+								<li><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html">SASS</a></li>
+								<li><a href="http://compass-style.org/help/documentation/">COMPASS</a></li>
+							</ul>
+						</p>
+					</section>
+					
+				</section>
+
+				<!-- MERCI & QUESTIONS -->
+				<section>
+					<h1>MERCI</h1>
+					<h3 class="gray">Des questions ?</h3>
+
+					<p><br>
+						<ul>
+							<li>Slides <a href="#">goo.gl/dedede</a></li>
+							<li>Code <a href="#">goo.gl/de899</a></li>
+						</ul>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: false,
+				history: true,
+				center: true,
+
+				transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
