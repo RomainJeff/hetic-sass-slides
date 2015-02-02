@@ -228,16 +228,118 @@
 					<h4 class="gray">Installation de SASS</h4>
 				</section>
 
+				
+				<!-- VARIABLES -->
+				<section>
+					<section>
+						<h1>VARIABLES</h1>
+						<h4 class="gray">La flexibilité</h4>
+					</section>
+
+					<section>
+						<h3>"Les variables dans SASS tu utiliseras"</h3>
+						<h4 class="gray" style="text-align: right;">Yoda</h4>
+					</section>
+
+					<section>
+						<h5>SCSS</h5>
+						<pre><code class="scss">
+$color: #FFF;
+$background: #000;
+
+body {
+  color: $color;
+  background: $background;
+}
+						</code></pre>
+
+						<h5>CSS</h5>
+						<pre><code class="scss">
+body {
+  color: #FFF;
+  background: #000;
+}
+						</code></pre>			
+					</section>
+				</section>
+
 				<!-- DEMO VARIABLES -->
 				<section>
 					<h1>DEMO TIME</h1>
 					<h4 class="gray">Implementation de variables</h4>
 				</section>
 
+				
+				<!-- IMBRICATION -->
+				<section>
+					<section>
+						<h1>L'IMBRICATION</h1>
+						<h4 class="gray">La lisibilité</h4>
+					</section>
+
+					<section>
+						<p>Rend le code plus propre & plus lisible.</p>
+					</section>
+
+					<section>
+						<h5>SCSS</h5>
+						<pre><code class="css">
+.test {
+  color: red;
+  background: white;
+
+  .lol {
+    color: white;
+    background: red;
+  }
+}
+						</code></pre>						
+
+						<h5>CSS</h5>
+						<pre><code class="css">
+.test {
+  color: red;
+  background: white;
+}
+
+.test .lol {
+  color: white;
+  background: red;
+}
+						</code></pre>						
+					</section>
+				</section>
+
+
 				<!-- DEMO NESTING -->
 				<section>
 					<h1>DEMO TIME</h1>
 					<h4 class="gray">Implementation de l'imbrication</h4>
+				</section>
+
+
+				<!-- IMPORT -->
+				<section>
+					<section>
+						<h1>Les partials</h1>
+						<h4 class="gray">L'organisation</h4>
+					</section>
+
+					<section>
+						<p>Permet d'exploser la structure CSS afin d'avoir une meilleure organisation.</p>
+					</section>
+
+					<section>
+						<h5>Exemple</h5>
+						<pre><code class="css">
+@import "_header.scss";
+@import "_footer.scss";
+						</code></pre>						
+					</section>
+
+					<section>
+						<p>Permet aussi d'importer des librairies externes <br><i style="font-size: 0.6em">(nous verrons ca ensuite)</i>						
+					</section>
 				</section>
 
 				<!-- DEMO IMPORT -->
